@@ -51,7 +51,7 @@ export async function scrapeAmazonProduct(url: string) {
     const images = 
       $('img[draggable="false"]') || '{}'
 
-    let imageUrls: Array<string> = []
+    let imageUrls: Array<any> = []
     images.each((i, image) => {
       imageUrls.push($(image).attr('src'))
     })
